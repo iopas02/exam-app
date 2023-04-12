@@ -16,15 +16,16 @@
             </thead>
             <tbody>
                 @forelse ($items as $item)
-                <tr>
-                    <td>{{ $item->itemName }}</td>
-                    <td>{{ $item->quantity }}</td>
-                    <td>{{ $item->updated_at }}</td>
-                    <td>
-                        <a href="{{ route('client.request', ['item' => $item]) }}" class="btn btn-primary">Request</a>                            
-                    </td>
-                </tr>
-                    
+                @if ($item->quantity > 0)
+                    <tr>
+                        <td>{{ $item->itemName }}</td>
+                        <td>{{ $item->quantity }}</td>
+                        <td>{{ $item->updated_at }}</td>
+                        <td>
+                            <a href="{{ route('client.request', ['item' => $item]) }}" class="btn btn-primary">Request</a>                            
+                        </td>
+                    </tr>
+                @endif
                 @empty
                     <span class="text-muted">No data.</span>
                 @endforelse

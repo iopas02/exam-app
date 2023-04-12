@@ -2,7 +2,7 @@
 
 @section('content')
     @include('include.navbar')
-    <h1>Register Item Page</h1>
+    <h1>Request Item Page</h1>
     <br>
     <form action="{{ route('client.requestPost', ['item'=>$item]) }}" method="post">
         @csrf
