@@ -18,6 +18,7 @@
                 </thead>
                 <tbody>
                     @forelse ($superadmins as $superadmin)
+                    <tr>
                         <td>{{ $superadmin->id }}</td>
                         <td>{{ $superadmin->username }}</td>
                         <td>{{ $superadmin->created_at }}</td>
@@ -25,6 +26,8 @@
                             <a href="" class="btn btn-success">Edit</a>
                             <br>
                             <a href="" class="btn btn-danger">Delete</a></td>
+                    </tr>
+                        
                     @empty
                         <span class="text-muted">No data.</span>
                     @endforelse
@@ -44,6 +47,7 @@
                 </thead>
                 <tbody>
                     @forelse ($admins as $admin)
+                    <tr>
                         <td>{{ $admin->id }}</td>
                         <td>{{ $admin->username }}</td>
                         <td>{{ $admin->created_at }}</td>
@@ -51,6 +55,8 @@
                             <a href="" class="btn btn-success">Edit</a>
                             <br>
                             <a href="" class="btn btn-danger">Delete</a></td>
+                    </tr>
+                        
                     @empty
                         <span class="text-muted">No data.</span>
                     @endforelse
@@ -70,6 +76,7 @@
                 </thead>
                 <tbody>
                     @forelse ($clients as $client)
+                    <tr>
                         <td>{{ $client->id }}</td>
                         <td>{{ $client->username }}</td>
                         <td>{{ $client->created_at }}</td>
@@ -77,6 +84,8 @@
                             <a href="" class="btn btn-success">Edit</a>
                             <br>
                             <a href="" class="btn btn-danger">Delete</a></td>
+                    </tr>
+                       
                     @empty
                         <span class="text-muted">No data.</span>
                     @endforelse
